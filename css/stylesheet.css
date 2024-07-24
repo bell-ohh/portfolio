@@ -1,0 +1,416 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+:root {
+  --dgray: #202020;
+  --medgr: #3f3f3f;
+  --ligray: #707070;
+  --yellow: #ffdf6c;
+  --white: #ffffff;
+  --headf: "Playfair Display", serif;
+  --subf: "Open Sans", sans-serif;
+
+}
+
+body {
+  background-color: var(--dgray);
+  margin: 2px;
+  color: var(--yellow)
+}
+
+.nav {
+  margin: auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+
+}
+
+a.navlink:hover {
+  color: var(--white);
+  transition: color, 3s;
+}
+
+a.navlink {
+  text-decoration: none;
+  font-weight: normal;
+  font-family: Open Sans;
+  color: var(--yellow);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.button {
+  background-color: var(--yellow);
+  color: var(--medgr);
+  font-family: var(--subf);
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+.button:hover {
+  transition: color, 3s;
+  background-color: var(--white);
+}
+
+.button a {
+  color: var(--medgr);
+  text-decoration: none;
+
+}
+
+i {
+  font-size: 1.5rem;
+  color: var(--yellow);
+}
+
+i:hover {
+  color: var(--white);
+  transition: color, 3s;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--ligray);
+  width: 100%;
+}
+
+header h2 {
+  font-family: var(--subf);
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 2rem;
+  color: var(--white);
+}
+
+header h2:hover {
+  color: var(--yellow);
+
+  transition-duration: 3s;
+}
+
+.hero-section {
+  margin: 0;
+  padding: 0;
+  background-color: var(--dgray);
+}
+
+.border {
+  color: white;
+  margin-top: 25px;
+  padding: 0;
+  width: 100%;
+  border-image: linear-gradient(to right, #ffdf6c 0%, #ffffff 100%) 1;
+  border-radius: 2px;
+  border-top-width: 2px;
+  border-top-style: solid;
+}
+
+h1 {
+  font-family: var(--headf);
+  font-weight: normal;
+  font-size: 3rem;
+  color: var(--yellow);
+}
+
+h3 {
+  text-align: center;
+}
+
+h4 {
+  font-family: var(--subf);
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.wrapperi {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+p {
+  display: flex;
+  justify-content: center;
+  color: var(--white);
+  font-family: var(--subf);
+  font-size: 2rem;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.7rem;
+}
+
+
+.card h4 {
+  font-family: var(--subf);
+  font-size: 2rem;
+}
+
+.card img {
+  padding: 0;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card a:hover {
+  transition: color, 3s;
+  background-color: var(--white);
+  border: none;
+}
+
+.card a {
+
+  background-color: var(--yellow);
+  color: var(--medgr);
+  font-family: var(--subf);
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-block;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+.card p {
+  font-family: var(--subf);
+  font-size: 1rem;
+}
+
+h1 i {
+  font-size: 3rem;
+  margin: 1rem;
+}
+
+.contacts-section {
+  font-family: var(--subf);
+  font-weight: normal;
+  color: var(--white);
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.contacts-section p {
+  font-size: 1rem;
+}
+
+footer p {
+  color: var(--white);
+}
+
+
+
+.burger {
+  display: none;
+}
+
+
+
+
+
+@media (min-width: 0px) and (max-width: 649px) {
+  .card-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .burger {
+    display: block;
+    position: relative;
+    top: 48px;
+    background-color: var(--dgray);
+    border: none;
+  }
+
+  .nav {
+    display: none;
+    margin: 0;
+    background: var(--dgray);
+    position: absolute;
+    top: 123px;
+    left: 0px;
+    width: 50%;
+    height: 100vh;
+    padding: 0px;
+    transition: all 400ms;
+  }
+
+  .navlink {
+    display: flex;
+    justify-content: center;
+  }
+
+  .navactive {
+    right: 0;
+    display: block;
+  }
+
+  a.navlink {
+    margin-top: 3rem;
+    color: var(--white);
+    height: 30px;
+  }
+
+  a.navlink:hover {
+    background-color: var(--medgr);
+    transition: color, 3s;
+    height: 30px;
+  }
+
+  form {
+    max-width: 250px;
+  }
+}
+
+input[type="submit"] {
+  padding: 15px;
+  border-radius: 10px;
+  font-family: var(--subf);
+  background-color: var(--yellow);
+  color: var(--dgray);
+  border: none;
+  font-size: 1.1rem;
+  display: block;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type="tel"],
+input[type="email"],
+input[type="text"] {
+  border: 1px solid var(--yellow);
+  width: 100%;
+}
+
+.submit-btn-wrppr {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  padding: 10px;
+
+}
+
+textarea {
+  border: 1px solid var(--yellow);
+  width: 100%;
+}
+
+.wrapper {
+
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: baseline;
+  align-content: center;
+  justify-items: center;
+  padding: 10px;
+  gap: 2rem;
+}
+
+.wrapperbl {
+
+  width: 800px;
+  display: grid;
+  justify-content: center;
+  align-items: baseline;
+  align-content: center;
+  justify-items: center;
+  padding: 10px;
+  gap: 2rem;
+}
+
+
+label {
+  padding-top: 1rem;
+  margin: 5px;
+
+}
+
+form {
+  width: 750px;
+  display: grid;
+  gap: 3rem;
+}
+
+.pinky {
+
+  display: none;
+}
+
+.mystyle {
+  display: block;
+}
+
+#timebutton {
+  width: 375px;
+  padding: 25px;
+  background-color: var(--yellow);
+  color: white;
+  font-size: 25px;
+  border: none;
+
+}
+
+
+#wrapperdiv {
+  padding-top: px;
+  display: flex;
+  justify-content: center;
+}
+
+
+footer i {
+  font-size: 3rem;
+}
+
+.wrapp {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+
+}
+
+#NYCTime {
+
+display: block;
+
+}
+
+
+.textbox {
+  color: var(--white);
+  font-size: 1rem;
+  font-family: var(--subf);
+  text-wrap: wrap;
+  width: 500px;
+}
+
+.imgc {
+  width: 25%;
+  border-radius: 50px;
+}
+
+.textbox a {
+  color: var(--yellow);
+  text-decoration: none;
+}
